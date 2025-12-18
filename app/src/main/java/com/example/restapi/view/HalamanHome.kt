@@ -43,6 +43,7 @@ import com.example.restapi.view.viewmodel.HomeViewModel
 import com.example.restapi.view.viewmodel.StatusUiSiswa
 import com.example.restapi.view.viewmodel.provider.PenyediaViewModel
 
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
@@ -78,7 +79,7 @@ fun HomeScreen(
         }
     ) { innerPadding ->
         HomeBody(
-            statusUiSiswa = viewModel.statusUiSiswa,
+            statusUiSiswa = viewModel.listSiswa,
             //edit 2.3 : tambahkan parameter onSiswaClick
             onSiswaClick = navigateToItemUpdate,
             retryAction = viewModel::loadSiswa,
@@ -106,7 +107,7 @@ fun HomeBody(
             //edit 2.5 : tambahkan event onSiswaClick
             is StatusUiSiswa.Success -> DaftarSiswa(
                 siswa = statusUiSiswa.siswa,
-                onSiswaClick = onSiswaClick
+                onSiswaClick = onSiswaClick as (DataSiswa) -> Unit
             )
             is StatusUiSiswa.Error -> ErrorScreen(
                 retryAction,
