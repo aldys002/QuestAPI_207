@@ -2,30 +2,32 @@ package com.example.restapi.view.uicontroller
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.restapi.view.EntrySiswaScreen
+import com.example.restapi.view.HomeScreen
 import com.example.restapi.view.route.DestinasiEntry
 import com.example.restapi.view.route.DestinasiHome
 
 @Composable
-fun DataSiswaApp(navController: NavController = rememberNavController(),
+fun DataSiswaApp(navController: NavHostController = rememberNavController(),
                  modifier: Modifier){
-                HostNavigasi(navController = navController)
+                HostNavigasi(navController = navController, modifier = modifier)
 }
 
 @Composable
 fun HostNavigasi(
-    navController: NavController,
-    modifier: Modifier
+    navController: NavHostController,
+    modifier: Modifier = Modifier
 ){
     NavHost(navController = navController, startDestination = DestinasiHome.route,
     modifier = Modifier){
         composable(DestinasiHome.route){
-            HomeScreen(navigateToItemEntry= {navController.navigate
-                (DestinasiEntry.route)},
+            HomeScreen(navigateToItemEntry= {navController.navigate(DestinasiEntry.route)},
                 navigateToItemUpdate = {
-                    navController.navigate("${DestinasiDetail.route}/${it}")
+   //                 navController.navigate("${DestinasiDetail.route}/${it}")
                 })
         }
         composable(DestinasiEntry.route){
