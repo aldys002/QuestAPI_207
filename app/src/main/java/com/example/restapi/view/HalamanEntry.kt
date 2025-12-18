@@ -146,7 +146,6 @@ fun FormTambahSiswa(
                     .padding(
                         start = dimensionResource(id = R.dimen.padding_medium)
                     )
-                    .padding_medium()
             )
         }
 
@@ -154,7 +153,6 @@ fun FormTambahSiswa(
             thickness = dimensionResource(R.dimen.padding_small),
             modifier = Modifier
                 .padding(bottom = dimensionResource(R.dimen.padding_medium))
-                .padding_medium()
         )
     }
 }
