@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RestApi</string>
+    <!-- Entry Screen -->
+    <string name="entry_siswa">Tambah Siswa</string>
+    <string name="btn_submit">Submit</string>
+    <string name="required_field">* required fields</string>
+
+    <!-- Form -->
+    <string name="nama">Nama Siswa</string>
+    <string name="alamat">Alamat Siswa</string>
+    <string name="telpon">Telpon Siswa</string>
+
+    <!-- Status -->
+    <string name="loading">Loading...</string>
+    <string name="error">Terjadi kesalahan</string>
+    <string name="retry">Coba lagi</string>
+
+    <!-- Navigation -->
+    <string name="back">Back</string>
+</resources>
