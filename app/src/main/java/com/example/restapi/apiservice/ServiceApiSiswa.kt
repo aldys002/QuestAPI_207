@@ -1,9 +1,13 @@
 package com.example.restapi.apiservice
 
+import androidx.room.Delete
 import com.example.restapi.modeldata.DataSiswa
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.PUT
+import retrofit2.http.Query
 
 interface ServiceApiSiswa {
     @GET("bacaTeman.php")
@@ -11,10 +15,16 @@ interface ServiceApiSiswa {
 
     @POST("insertTM.php")
     suspend fun postSiswa(@Body dataSiswa: DataSiswa):retrofit2.Response<Void>
+
+    @GET("baca1Teman.php/{id}")
+    suspend fun getSatuSiswa(@Query("id") id: Int): DataSiswa
+
+    @PUT("editTM.php/{id}")
+    suspend fun editStatusSiswa(@Query("id") id: Int,@Body dataSiswa: DataSiswa): retrofit2.Response<Void>
+
+    @DELETE
+    suspend fun hapusSatuSiswa(@Query("id")id: Int):retrofit2.Response<Void>
+
 }
 
-//    @GET("baca1Teman.php/{id}")
-//    suspend fun getStasusSiswa(@Query("id") id: Int): DataSiswa
 
-//    @PUT("editTM.php/{id}")
-//    suspend fun editStatusSiswa(@Qyery("id") id: Int): DataSiswa
