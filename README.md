@@ -3,3 +3,5 @@ mas ini gaada error saya udh nyoba dr tadi siang tp ui nya ttep ga muncul gatau 
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ca03f851-5edf-47b9-b080-e5eb80e102e0" />
 
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4eb59351-02bb-4e4a-9150-3e8b481ac76a" />
+
